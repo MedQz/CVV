@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية - حمزة الحريبي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#5D5CDE',
+                            dark: '#4a49b1',
+                            light: '#7d7ce6'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+        
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dark .card-hover:hover {
+            box-shadow: 0 10px 20px rgba(93, 92, 222, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .section {
+            scroll-margin-top: 80px;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+            color: #5D5CDE;
+        }
+        
+        .dark .service-card:hover .service-icon {
+            color: #7d7ce6;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    
+    <!-- Header with Dark Mode Toggle -->
+    <header class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-primary dark:text-primary-light flex items-center">
+                <span class="ml-2">📄</span> السيرة الذاتية
+            </h1>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button id="toggleNav" class="md:hidden text-gray-700 dark:text-gray-300 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav id="mobileNav" class="hidden md:hidden absolute w-full bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 py-3">
+            <ul class="flex flex-col items-center">
+                <li class="w-full text-center"><a href="#personal" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">المعلومات الشخصية</a></li>
+                <li class="w-full text-center"><a href="#experience" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">الخبرات العملية</a></li>
+                <li class="w-full text-center"><a href="#skills" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">المهارات</a></li>
+                <li class="w-full text-center"><a href="#software" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">البرامج المستخدمة</a></li>
+                <li class="w-full text-center"><a href="#contact" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">معلومات التواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Desktop Side Navigation -->
+    <nav class="hidden md:block fixed right-0 top-0 h-full w-48 bg-white dark:bg-gray-800 shadow-lg pt-24 transition-colors duration-300">
+        <ul class="flex flex-col space-y-2">
+            <li><a href="#personal" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">المعلومات الشخصية</a></li>
+            <li><a href="#experience" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">الخبرات العملية</a></li>
+            <li><a href="#skills" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">المهارات</a></li>
+            <li><a href="#software" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">البرامج المستخدمة</a></li>
+            <li><a href="#contact" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">معلومات التواصل</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto pt-24 pb-16 md:mr-52 px-4">
+        
+        <!-- Personal Information Section -->
+        <section id="personal" class="section mb-16 opacity-0">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-primary opacity-10 rounded-full -mr-10 -mt-10"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
+                        <div class="w-32 h-32 rounded-full mb-4 md:mb-0 md:ml-6 shadow-lg overflow-hidden">
+                            <img src="https://pfst.cf2.poecdn.net/base/image/8e39e4f5cdad8d07bafa35c837856256479f3efb93ba033179421010236c54db?w=3328&h=1531" alt="حمزة الحريبي" class="w-full h-full object-cover">
+                        </div>
+                        <div class="text-center md:text-right">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-2 text-primary dark:text-primary-light">حمزة عبدالفتاح عبدالله سعيد الحريبي</h2>
+                            <h3 class="text-xl md:text-2xl font-semibold text-gray-600 dark:text-gray-300 mb-4">مصمم جرافيك ومونتاج</h3>
+                            <div class="inline-block bg-primary text-white dark:bg-primary-dark py-1 px-4 rounded-full text-sm">جاهز للعمل ✨</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg flex items-center card-hover">
+                            <span class="text-primary dark:text-primary-light text-2xl ml-3"><i class="fas fa-calendar-alt"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-sm">تاريخ الميلاد</h4>
+                                <p>6 يونيو 2001</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg flex items-center card-hover">
+                            <span class="text-primary dark:text-primary-light text-2xl ml-3"><i class="fas fa-flag"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-sm">الجنسية</h4>
+                                <p>يمني</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg flex items-center card-hover">
+                            <span class="text-primary dark:text-primary-light text-2xl ml-3"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-sm">مكان الإقامة</h4>
+                                <p>تعز، اليمن</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg flex items-center card-hover">
+                            <span class="text-primary dark:text-primary-light text-2xl ml-3"><i class="fas fa-briefcase"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-gray-500 dark:text-gray-400 text-sm">المسمى الوظيفي</h4>
+                                <p>مصمم جرافيك ومونتاج</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section mb-16 opacity-0">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">الخبرات العملية</h2>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+                <div class="relative border-r-4 border-primary dark:border-primary-light pr-6 pb-2">
+                    <div class="absolute right-[-8px] top-0 w-4 h-4 rounded-full bg-primary dark:bg-primary-light"></div>
+                    <div class="mb-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-bold text-primary dark:text-primary-light mb-2 md:mb-0">مصمم جرافيك ومونتاج</h3>
+                            <div class="inline-block bg-primary text-white dark:bg-primary-dark py-1 px-4 rounded-full text-sm">2021 - حتى الآن</div>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-4">مجموعة ابن الحاج التجارية</h4>
+                        
+                        <ul class="space-y-3 mt-6">
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-tag"></i></span>
+                                <p>تصميم <strong>ليبلات المنتجات الزراعية</strong> مثل الأسمدة والمبيدات والبذور.</p>
+                            </li>
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-fingerprint"></i></span>
+                                <p>تطوير <strong>الهويات البصرية</strong> والعلامات التجارية للمنتجات والشركات.</p>
+                            </li>
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-bullhorn"></i></span>
+                                <p>إعداد <strong>التصاميم التسويقية</strong> مثل البروشورات، البانرات، والملصقات الإعلانية.</p>
+                            </li>
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-video"></i></span>
+                                <p>صناعة <strong>الفيديوهات الإعلانية والمونتاج</strong> لعرض المنتجات والتسويق المرئي.</p>
+                            </li>
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-check-circle"></i></span>
+                                <p>تحسين <strong>جودة التصاميم والطباعة</strong> وفقًا لمتطلبات العلامة التجارية.</p>
+                            </li>
+                            <li class="service-card p-3 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-start transform hover:scale-[1.02] transition-transform">
+                                <span class="service-icon text-lg text-primary dark:text-primary-light ml-3"><i class="fas fa-print"></i></span>
+                                <p>تنفيذ تصاميم احترافية متوافقة مع معايير الطباعة والتعبئة والتغليف.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section mb-16 opacity-0">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">المهارات</h2>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-tags"></i></span>
+                            <h3 class="text-lg font-bold">تصميم ليبلات المنتجات الزراعية</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill1-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-palette"></i></span>
+                            <h3 class="text-lg font-bold">تصميم الهوية البصرية والشعارات</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill2-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-film"></i></span>
+                            <h3 class="text-lg font-bold">مونتاج الفيديوهات</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill3-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-share-alt"></i></span>
+                            <h3 class="text-lg font-bold">تصميم منشورات السوشيال ميديا</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill4-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-image"></i></span>
+                            <h3 class="text-lg font-bold">تحرير الصور والفيديوهات</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill5-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card p-5 border-2 border-gray-100 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary-light transition-colors">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl text-primary dark:text-primary-light ml-3"><i class="fas fa-lightbulb"></i></span>
+                            <h3 class="text-lg font-bold">الإبداع والتفكير الفني</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                            <div class="progress-bar bg-primary dark:bg-primary-light rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="mt-2 text-left">
+                            <span id="skill6-percentage" class="text-sm text-gray-500 dark:text-gray-400">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Software Section -->
+        <section id="software" class="section mb-16 opacity-0">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">البرامج المستخدمة</h2>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="w-full h-full" style="background: #31A8FF;">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Adobe Photoshop</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">تحرير الصور ومعالجتها</p>
+                            <div class="mt-3 flex">
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator" class="w-full h-full" style="background: #FF9A00;">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Adobe Illustrator</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">تصميم الشعارات والرسومات</p>
+                            <div class="mt-3 flex">
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-plain.svg" alt="InDesign" class="w-full h-full" style="background: #FF3366;">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Adobe InDesign</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">تصميم المنشورات والمطبوعات</p>
+                            <div class="mt-3 flex">
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-gray-300 dark:text-gray-600 text-xl"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" alt="Premiere Pro" class="w-full h-full" style="background: #9999FF;">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Adobe Premiere Pro</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">تحرير الفيديو ومونتاجه</p>
+                            <div class="mt-3 flex">
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" alt="After Effects" class="w-full h-full" style="background: #9999FF;">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Adobe After Effects</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">الحركة والمؤثرات البصرية</p>
+                            <div class="mt-3 flex">
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-primary dark:text-primary-light text-xl"><i class="fas fa-star"></i></span>
+                                <span class="text-gray-300 dark:text-gray-600 text-xl"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section mb-16 opacity-0">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">معلومات التواصل</h2>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="mailto:humzahumdy770@gmail.com" class="contact-card flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform hover:scale-105 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">البريد الإلكتروني</h3>
+                            <p class="text-gray-600 dark:text-gray-400">humzahumdy770@gmail.com</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://iwtsp.com/967774661144" target="_blank" class="contact-card flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform hover:scale-105 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center text-xl ml-4">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">واتساب</h3>
+                            <p class="text-gray-600 dark:text-gray-400">967774661144+</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://2u.pw/zHiVx1KD" target="_blank" class="contact-card flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform hover:scale-105 transition-all hover:shadow-lg md:col-span-2">
+                        <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl ml-4">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">معرض الأعمال</h3>
+                            <p class="text-gray-600 dark:text-gray-400">اضغط هنا لمشاهدة أعمالي</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-10">
+                    <h3 class="text-xl font-bold mb-4 text-center">تواصل معي</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium">الاسم</label>
+                                <input type="text" id="name" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل اسمك" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل بريدك الإلكتروني" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium">الموضوع</label>
+                            <input type="text" id="subject" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل عنوان الرسالة" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-sm font-medium">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" id="sendButton" class="px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors">
+                                <i class="fas fa-paper-plane ml-2"></i>إرسال الرسالة
+                            </button>
+                        </div>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg text-center">
+                        تم إرسال رسالتك بنجاح! سأتواصل معك في أقرب وقت ممكن.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Download CV Button -->
+        <div class="fixed left-5 bottom-5 z-40">
+            <button id="downloadCV" class="flex items-center bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-full shadow-lg transition-colors">
+                <i class="fas fa-download ml-2"></i>
+                <span class="hidden sm:inline">تحميل السيرة الذاتية</span>
+                <span class="sm:hidden">تحميل</span>
+            </button>
+        </div>
+        
+        <!-- Download Info Modal -->
+        <div id="downloadModal" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 hidden">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full">
+                <h3 class="text-xl font-bold mb-4 text-primary dark:text-primary-light">تحميل السيرة الذاتية</h3>
+                <p class="mb-4">للحصول على نسخة من السيرة الذاتية، يرجى التواصل مباشرة عبر:</p>
+                <div class="space-y-2">
+                    <div class="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fab fa-whatsapp text-green-500 text-xl ml-3"></i>
+                        <a href="https://iwtsp.com/967774661144" target="_blank" class="hover:text-primary dark:hover:text-primary-light transition-colors">واتساب: 967774661144+</a>
+                    </div>
+                    <div class="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <i class="fas fa-envelope text-primary dark:text-primary-light text-xl ml-3"></i>
+                        <a href="mailto:humzahumdy770@gmail.com" class="hover:text-primary dark:hover:text-primary-light transition-colors">البريد: humzahumdy770@gmail.com</a>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button id="closeModal" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-medium py-2 px-4 rounded transition-colors">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // Listen for changes to the prefers-color-scheme media query
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        
+        // Mobile navigation toggle
+        const toggleNav = document.getElementById('toggleNav');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        toggleNav.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+        
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('#mobileNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+            });
+        });
+        
+        // Scroll animation for sections
+        const sections = document.querySelectorAll('.section');
+        
+        function animateSections() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('animate-fade-in');
+                    section.style.opacity = '1';
+                }
+            });
+        }
+        
+        // Animate progress bars for skills
+        const skillBars = document.querySelectorAll('.skill-card .progress-bar');
+        const skillPercentages = [95, 90, 85, 90, 85, 95]; // Percentages for each skill
+        
+        function animateProgressBars() {
+            skillBars.forEach((bar, index) => {
+                const sectionTop = document.getElementById('skills').getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.75) {
+                    setTimeout(() => {
+                        bar.style.width = skillPercentages[index] + '%';
+                        document.getElementById(`skill${index+1}-percentage`).textContent = skillPercentages[index] + '%';
+                    }, 300 * index);
+                }
+            });
+        }
+        
+        // Run animations on page load and scroll
+        window.addEventListener('DOMContentLoaded', () => {
+            animateSections();
+            animateProgressBars();
+        });
+        
+        window.addEventListener('scroll', () => {
+            animateSections();
+            animateProgressBars();
+        });
+        
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            // Here we'll just show a success message
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+        
+        // Download CV functionality
+        const downloadBtn = document.getElementById('downloadCV');
+        const downloadModal = document.getElementById('downloadModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        downloadBtn.addEventListener('click', () => {
+            downloadModal.classList.remove('hidden');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            downloadModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        downloadModal.addEventListener('click', (e) => {
+            if (e.target === downloadModal) {
+                downloadModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
