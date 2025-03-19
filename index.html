@@ -104,6 +104,7 @@
                 <li class="w-full text-center"><a href="#skills" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">المهارات</a></li>
                 <li class="w-full text-center"><a href="#software" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">البرامج المستخدمة</a></li>
                 <li class="w-full text-center"><a href="#contact" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">معلومات التواصل</a></li>
+                <li class="w-full text-center"><a href="https://2u.pw/zHiVx1KD" target="_blank" class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-700">معرض الأعمال</a></li>
             </ul>
         </nav>
     </header>
@@ -116,6 +117,7 @@
             <li><a href="#skills" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">المهارات</a></li>
             <li><a href="#software" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">البرامج المستخدمة</a></li>
             <li><a href="#contact" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">معلومات التواصل</a></li>
+            <li><a href="https://2u.pw/zHiVx1KD" target="_blank" class="block py-3 px-4 hover:bg-primary hover:text-white dark:hover:bg-primary-dark transition-colors duration-300 rounded-r-lg">معرض الأعمال</a></li>
         </ul>
     </nav>
 
@@ -125,11 +127,12 @@
         <!-- Personal Information Section -->
         <section id="personal" class="section mb-16 opacity-0">
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-40 h-40 bg-primary opacity-10 rounded-full -mr-10 -mt-10"></div>
                 <div class="relative z-10">
                     <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
-                        <div class="w-32 h-32 rounded-full mb-4 md:mb-0 md:ml-6 shadow-lg overflow-hidden">
-                            <img src="https://pfst.cf2.poecdn.net/base/image/8e39e4f5cdad8d07bafa35c837856256479f3efb93ba033179421010236c54db?w=3328&h=1531" alt="حمزة الحريبي" class="w-full h-full object-cover">
+                        <div class="w-32 h-32 rounded-full mb-4 md:mb-0 md:ml-6 shadow-lg overflow-hidden relative">
+                            <!-- إضافة خلفية زرقاء خلف الصورة -->
+                            <div class="absolute inset-0 bg-primary opacity-10 rounded-full"></div>
+                            <img src="https://medqz.github.io/files/حمزة.png" alt="حمزة الحريبي" class="w-full h-full object-cover relative z-10">
                         </div>
                         <div class="text-center md:text-right">
                             <h2 class="text-3xl md:text-4xl font-bold mb-2 text-primary dark:text-primary-light">حمزة عبدالفتاح عبدالله سعيد الحريبي</h2>
@@ -345,7 +348,7 @@
                     <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator" class="w-full h-full" style="background: #FF9A00;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="w-full h-full" style="background: #FF9A00;">
                             </div>
                             <h3 class="text-lg font-bold mb-2">Adobe Illustrator</h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400">تصميم الشعارات والرسومات</p>
@@ -362,7 +365,7 @@
                     <div class="software-card p-5 rounded-lg bg-white dark:bg-gray-800 shadow-lg border-b-4 border-primary dark:border-primary-light transform hover:scale-105 transition-transform">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-plain.svg" alt="InDesign" class="w-full h-full" style="background: #FF3366;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" alt="InDesign" class="w-full h-full" style="background: #FF3366;">
                             </div>
                             <h3 class="text-lg font-bold mb-2">Adobe InDesign</h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400">تصميم المنشورات والمطبوعات</p>
@@ -457,24 +460,31 @@
                 
                 <div class="mt-10">
                     <h3 class="text-xl font-bold mb-4 text-center">تواصل معي</h3>
-                    <form id="contactForm" class="space-y-4">
+                    <!-- نموذج التواصل المُعدّل لإرسال الرسائل فعليًا -->
+                    <form action="https://formsubmit.co/humzahumdy770@gmail.com" method="POST" class="space-y-4" id="contactForm">
+                        <!-- حقول مخفية للتحكم بسلوك النموذج -->
+                        <input type="hidden" name="_subject" value="رسالة جديدة من السيرة الذاتية">
+                        <input type="hidden" name="_next" value="https://poe.com/thanks">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="name" class="block mb-2 text-sm font-medium">الاسم</label>
-                                <input type="text" id="name" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل اسمك" required>
+                                <input type="text" id="name" name="name" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل اسمك" required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium">البريد الإلكتروني</label>
-                                <input type="email" id="email" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل بريدك الإلكتروني" required>
+                                <input type="email" id="email" name="email" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل بريدك الإلكتروني" required>
                             </div>
                         </div>
                         <div>
                             <label for="subject" class="block mb-2 text-sm font-medium">الموضوع</label>
-                            <input type="text" id="subject" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل عنوان الرسالة" required>
+                            <input type="text" id="subject" name="subject" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="أدخل عنوان الرسالة" required>
                         </div>
                         <div>
                             <label for="message" class="block mb-2 text-sm font-medium">الرسالة</label>
-                            <textarea id="message" rows="4" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="اكتب رسالتك هنا..." required></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base" placeholder="اكتب رسالتك هنا..." required></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" id="sendButton" class="px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors">
@@ -482,6 +492,7 @@
                             </button>
                         </div>
                     </form>
+                    <!-- رسالة نجاح ستظهر بعد العودة من formsubmit -->
                     <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg text-center">
                         تم إرسال رسالتك بنجاح! سأتواصل معك في أقرب وقت ممكن.
                     </div>
@@ -526,10 +537,11 @@
         // Dark mode toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
         
-        // Check for system preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
+        // Always start with light mode
+        // System preference check is intentionally disabled to always start with light mode
+        // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        //     document.documentElement.classList.add('dark');
+        // }
         
         // Listen for changes to the prefers-color-scheme media query
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -596,35 +608,20 @@
         window.addEventListener('DOMContentLoaded', () => {
             animateSections();
             animateProgressBars();
+            
+            // التحقق مما إذا كانت هناك عودة من نموذج الاتصال
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('thanks')) {
+                document.getElementById('formSuccess').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('formSuccess').classList.add('hidden');
+                }, 5000);
+            }
         });
         
         window.addEventListener('scroll', () => {
             animateSections();
             animateProgressBars();
-        });
-        
-        // Contact form handling
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real application, you would send this data to a server
-            // Here we'll just show a success message
-            formSuccess.classList.remove('hidden');
-            contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formSuccess.classList.add('hidden');
-            }, 5000);
         });
         
         // Download CV functionality
